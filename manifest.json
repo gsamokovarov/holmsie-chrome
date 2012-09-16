@@ -1,0 +1,23 @@
+{
+  "name": "holmsie", 
+  "version": "0.1", 
+  "manifest_version": 2,
+  "description": "Simple HTML(5) problems detector.",
+  "permissions": ["tabs", "contextMenus", "*://*/*"],
+  "background": {
+    "scripts": ["lib/main.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "all_frames": true,
+      "css": ["data/holmes/holmes.css"],
+      "js": ["data/vendor/jquery-1.7.2.min.js", "data/holmes-debug.js"]
+    }
+  ],
+  "icons": {
+    "16": "icons/16.png",
+    "64": "icons/64.png",
+    "128": "icons/128.png"
+  }
+}
